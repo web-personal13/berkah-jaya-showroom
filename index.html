@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>BERKAH JAYA AUTO GROUP - Showroom Mobil Terpercaya Kota Metro Lampung</title>
+  <meta name="description" content="Berkah Jaya Auto Group Kota Metro Lampung. Jual beli mobil bekas & baru berkualitas, bergaransi resmi 100% bebas tabrak & banjir, tukar tambah harga tertinggi, dan simulasi kredit bunga ringan.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  
+  <!-- Google Fonts: Poppins (Clean & Professional Automotive Dealer Look) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            dealer: {
+              red: '#d32323',
+              redHover: '#b91c1c',
+              dark: '#0e1217',
+              darker: '#090c10',
+              grayBar: '#161b22',
+              cardBorder: '#e2e8f0',
+              textMuted: '#64748b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #0f172a;
+      background-color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Red Accent Active Underline (Summit Auto Group Style) */
+    .nav-link {
+      position: relative;
+      font-weight: 600;
+      font-size: 0.8125rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s ease;
+    }
+    .nav-link.active {
+      color: #d32323;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background-color: #d32323;
+      border-radius: 2px;
+    }
+
+    /* Category Filter Tab Active State */
+    .category-tab {
+      position: relative;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: #64748b;
+      transition: all 0.2s ease;
+      padding-bottom: 0.6rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .category-tab {
+        font-size: 0.8125rem;
+      }
+    }
+    .category-tab:hover {
+      color: #0f172a;
+    }
+    .category-tab.active {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .category-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background-color: #d32323;
+      border-radius: 2px;
+    }
+
+    /* Hide scrollbar for category tabs on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Car Card Hover & Stage */
+    .car-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .car-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px -8px rgba(0, 0, 0, 0.1);
+      border-color: #cbd5e1;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d32323;
+    }
+  </style>
+</head>
+<body class="selection:bg-dealer-red selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP UTILITY BAR                                                        -->
+  <!-- ========================================================================= -->
+  <header class="w-full">
+    <div class="bg-dealer-dark text-white text-[10.5px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-white/10 font-normal">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        
+        <!-- Left: Address & Phone -->
+        <div class="flex items-center gap-3 sm:gap-6 text-slate-300 truncate">
+          <div class="flex items-center gap-1.5 truncate">
+            <i class="fa-solid fa-location-dot text-dealer-red flex-shrink-0"></i>
+            <span class="truncate">Jl. Soekarno Hatta No.43 16b, Kota Metro</span>
+          </div>
+          <div class="hidden sm:flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-dealer-red flex-shrink-0"></i>
+            <a href="tel:083179992384" class="font-semibold text-white hover:underline">(0831) 7999-2384</a>
+          </div>
+        </div>
+
+        <!-- Right: Operational Hours & Social Icons -->
+        <div class="flex items-center gap-3 text-slate-300 flex-shrink-0">
+          <span class="hidden md:inline text-[11px] text-slate-400">Sen - Min: <strong class="text-white">08.00 - 18.00</strong></span>
+          <div class="flex items-center gap-2.5 sm:gap-3 pl-2 sm:border-l sm:border-white/15">
+            <a href="https://instagram.com/yukocalatrava" target="_blank" class="hover:text-pink-400 transition-colors p-1" title="Instagram @yukocalatrava">
+              <i class="fa-brands fa-instagram text-xs sm:text-sm"></i>
+            </a>
+            <a href="https://wa.me/6283179992384" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp Official">
+              <i class="fa-brands fa-whatsapp text-xs sm:text-sm"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Jl.+Soekarno+Hatta+No.43+16b,+Mulyojati,+Kec.+Metro+Bar.,+Kota+Metro,+Lampung+34121" target="_blank" class="hover:text-dealer-red transition-colors p-1" title="Google Maps">
+              <i class="fa-solid fa-map-location-dot text-xs sm:text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 2. MAIN NAVIGATION (White Header matching Summit Auto Group)              -->
+    <!-- ========================================================================= -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          
+          <!-- Brand Logo -->
+          <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-900 p-1 flex items-center justify-center shadow-sm border border-slate-200 overflow-hidden flex-shrink-0">
+              <img src="logo.jpeg" alt="Logo Berkah Jaya" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="flex items-center gap-1 leading-none">
+                <span class="font-black text-base sm:text-xl tracking-tight text-slate-900 group-hover:text-dealer-red transition-colors">BERKAH JAYA</span>
+                <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-dealer-red"></span>
+              </div>
+              <span class="text-[8.5px] sm:text-[10px] tracking-[0.22em] font-bold text-slate-500 uppercase block mt-0.5">AUTO GROUP • METRO</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <div class="hidden xl:flex items-center space-x-7">
+            <a href="#beranda" class="nav-link active">BERANDA</a>
+            <a href="#inventory" class="nav-link text-slate-700 hover:text-dealer-red">DAFTAR MOBIL</a>
+            
+            <!-- Dropdown Menu -->
+            <div class="relative group py-2">
+              <button class="nav-link text-slate-700 hover:text-dealer-red flex items-center gap-1.5 focus:outline-none">
+                <span>PILIH KATEGORI</span>
+                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition-transform"></i>
+              </button>
+              <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white border border-slate-200 shadow-xl rounded-lg py-2 z-50">
+                <a href="#inventory" onclick="filterByTab('mpv')" class="block px-4 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-dealer-red">MPV Keluarga</a>
+                <a href="#inventory" onclick="filterByTab('niaga')" class="block px-4 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-dealer-red">Niaga & Pick-Up</a>
+                <a href="#inventory" onclick="filterByTab('city')" class="block px-4 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-dealer-red">City Car & Hatchback</a>
+                <a href="#inventory" onclick="filterByTab('suv')" class="block px-4 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-dealer-red">SUV & Travel</a>
+              </div>
+            </div>
+
+            <a href="#kredit" class="nav-link text-slate-700 hover:text-dealer-red">SIMULASI KREDIT</a>
+            <a href="#tukar-tambah" class="nav-link text-slate-700 hover:text-dealer-red">TUKAR TAMBAH</a>
+            <a href="#keunggulan" class="nav-link text-slate-700 hover:text-dealer-red">KEUNGGULAN</a>
+            <a href="#showroom" class="nav-link text-slate-700 hover:text-dealer-red">FASILITAS</a>
+            <a href="#lokasi" class="nav-link text-slate-700 hover:text-dealer-red">LOKASI & KONTAK</a>
+          </div>
+
+          <!-- Red CTA Button -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="#kredit" 
+               class="bg-dealer-red hover:bg-dealer-redHover text-white text-xs font-bold tracking-wider uppercase px-5 py-2.5 sm:py-3 rounded-md transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+              <i class="fa-solid fa-file-invoice-dollar text-sm"></i>
+              <span>AJUKAN KREDIT</span>
+            </a>
+          </div>
+
+          <!-- Mobile Actions (WA Quick Call + Hamburger) -->
+          <div class="xl:hidden flex items-center gap-2">
+            <a href="https://wa.me/6283179992384" target="_blank" class="px-2.5 py-1.5 bg-emerald-50 text-emerald-600 rounded-md text-xs font-bold flex items-center gap-1.5" title="Chat WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span class="text-[11px]">Chat</span>
+            </a>
+            <button id="mobile-toggle" class="p-2 text-slate-800 hover:text-dealer-red focus:outline-none" aria-label="Buka Menu Navigasi">
+              <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden xl:hidden bg-white border-t border-slate-200 px-5 pt-3 pb-6 shadow-xl space-y-3">
+        <a href="#beranda" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">BERANDA</a>
+        <a href="#inventory" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">DAFTAR SEMUA MOBIL</a>
+        <a href="#kredit" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">SIMULASI ANGSURAN KREDIT</a>
+        <a href="#tukar-tambah" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">TUKAR TAMBAH MOBIL</a>
+        <a href="#keunggulan" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">STANDAR KUALITAS & GARANSI</a>
+        <a href="#showroom" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">FASILITAS SHOWROOM</a>
+        <a href="#lokasi" class="mobile-item block text-xs font-bold text-slate-800 hover:text-dealer-red py-2 border-b border-slate-100">LOKASI & KONTAK</a>
+
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="#kredit" class="w-full text-center py-2.5 bg-dealer-red text-white text-xs font-bold tracking-wider rounded-md uppercase">
+            SIMULASI & AJUKAN KREDIT
+          </a>
+          <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%20Auto%20Group%2C%20saya%20ingin%20tanya%20unit%20mobil%20yang%20tersedia." target="_blank"
+             class="w-full text-center py-2.5 bg-emerald-600 text-white text-xs font-bold tracking-wider rounded-md uppercase flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>WHATSAPP KONSULTASI</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 3. HERO SECTION                                                           -->
+  <!-- ========================================================================= -->
+  <section id="beranda" class="relative bg-dealer-darker text-white pt-8 pb-20 sm:pt-16 sm:pb-32 lg:pt-24 lg:pb-40 overflow-hidden">
+    <!-- Backdrop Image with Gradient Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="shorum.jpeg" alt="Showroom Berkah Jaya Metro" class="w-full h-full object-cover object-center brightness-[0.22] scale-105">
+      <div class="absolute inset-0 bg-gradient-to-r from-dealer-darker via-dealer-darker/90 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-dealer-darker via-transparent to-black/60"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-4 sm:space-y-5">
+          
+          <div class="inline-flex items-center gap-2 text-dealer-red font-bold text-[10px] sm:text-xs uppercase tracking-widest bg-dealer-red/10 border border-dealer-red/30 px-3 py-1 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-dealer-red animate-pulse"></span>
+            <span>SHOWROOM TERPERCAYA KOTA METRO LAMPUNG</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]">
+            TEMUKAN MOBIL<br>
+            <span class="text-dealer-red">IDAMAN ANDA</span>
+          </h1>
+
+          <p class="text-slate-300 text-xs sm:text-base max-w-xl font-normal leading-relaxed">
+            Koleksi terlengkap mobil bekas & baru pilihan bergaransi resmi. <strong>100% bebas banjir & bebas tabrak</strong>, dokumen Samsat sah, tukar tambah cepat, dan proses kredit dibantu sampai ACC.
+          </p>
+
+          <!-- Dual Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 pt-1">
+            <a href="#inventory" 
+               class="bg-dealer-red hover:bg-dealer-redHover text-white text-xs font-bold tracking-wider uppercase px-6 py-3.5 rounded-md transition-all shadow-lg flex items-center justify-center gap-2">
+              <span>LIHAT SEMUA UNIT</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+            <a href="#kredit" 
+               class="bg-white/5 hover:bg-white/10 text-white border border-white/25 hover:border-white text-xs font-bold tracking-wider uppercase px-6 py-3.5 rounded-md transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-calculator text-slate-300"></i>
+              <span>SIMULASI KREDIT</span>
+            </a>
+          </div>
+
+          <!-- Micro-Stats Box on Mobile & Desktop -->
+          <div class="pt-4 sm:pt-6 border-t border-white/15">
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 max-w-lg bg-white/5 backdrop-blur-sm p-3 sm:p-0 rounded-xl sm:rounded-none border sm:border-0 border-white/10 text-center sm:text-left">
+              <div>
+                <div class="text-lg sm:text-2xl font-black text-white">100%</div>
+                <div class="text-[9px] sm:text-[11px] text-slate-400 font-semibold uppercase mt-0.5">Bebas Banjir & Laka</div>
+              </div>
+              <div>
+                <div class="text-lg sm:text-2xl font-black text-white">160+</div>
+                <div class="text-[9px] sm:text-[11px] text-slate-400 font-semibold uppercase mt-0.5">Titik Inspeksi Ahli</div>
+              </div>
+              <div>
+                <div class="text-lg sm:text-2xl font-black text-white">1 Hari</div>
+                <div class="text-[9px] sm:text-[11px] text-slate-400 font-semibold uppercase mt-0.5">Kredit Kilat ACC</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero: Featured Car Cutout Frame (Desktop Only) -->
+        <div class="lg:col-span-5 relative hidden lg:block">
+          <div class="relative rounded-2xl bg-gradient-to-b from-white/10 to-white/5 p-6 border border-white/15 backdrop-blur-md shadow-2xl">
+            
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+              <span class="inline-block bg-dealer-red text-white text-[10px] font-bold px-2.5 py-1 rounded tracking-wider uppercase">
+                FEATURED UNIT HARI INI
+              </span>
+              <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">
+                <i class="fa-solid fa-circle-check"></i> Siap Pakai Langsung
+              </span>
+            </div>
+
+            <!-- Spotlight Car Image -->
+            <div class="my-4 py-4 bg-white/5 rounded-xl flex items-center justify-center min-h-[200px]">
+              <img src="mobil1.jpeg" alt="Toyota Veloz 2023" class="max-h-[180px] w-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300">
+            </div>
+
+            <div class="space-y-2 pt-2">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <h3 class="text-white font-bold text-base leading-tight">2023 Toyota New Veloz 1.5 Q</h3>
+                  <p class="text-xs text-slate-400">18.250 km • Automatic CVT • Putih Mutiara</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Harga Tunai</span>
+                  <span class="text-xl font-extrabold text-dealer-red">Rp 255 Jt</span>
+                </div>
+              </div>
+
+              <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%2C%20saya%20tertarik%20dengan%20Toyota%20Veloz%20Rp%20255%20Juta." target="_blank"
+                 class="w-full mt-3 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs tracking-wider rounded-md uppercase flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Tanya Unit via WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SEARCH INVENTORY BAR (Compact, Clean & Responsive)                    -->
+  <!-- ========================================================================= -->
+  <div class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 sm:-mt-20 lg:-mt-24">
+    <div class="bg-dealer-dark border border-white/15 rounded-xl p-4 sm:p-6 lg:p-7 shadow-2xl text-white">
+      
+      <div class="flex items-center justify-between mb-3 sm:mb-4">
+        <h2 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-300 flex items-center gap-2">
+          <i class="fa-solid fa-magnifying-glass text-dealer-red"></i>
+          <span>CARI MOBIL IMPIAN</span>
+        </h2>
+        <button type="button" onclick="resetFilters()" class="text-[11px] text-slate-400 hover:text-white flex items-center gap-1">
+          <i class="fa-solid fa-rotate-right text-xs"></i>
+          <span>Reset</span>
+        </button>
+      </div>
+
+      <!-- Search Inputs Grid: 2 columns on mobile, 5 columns on desktop -->
+      <form id="search-inventory-form" onsubmit="event.preventDefault(); applyFilter();" class="grid grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-3.5 items-end">
+        
+        <!-- Field 1: Merek / Make -->
+        <div>
+          <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Merek</label>
+          <select id="filter-make" class="w-full bg-[#18202c] border border-white/10 rounded-md px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs text-white focus:outline-none focus:border-dealer-red">
+            <option value="all">Semua Merek</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Honda">Honda</option>
+            <option value="Daihatsu">Daihatsu</option>
+          </select>
+        </div>
+
+        <!-- Field 2: Tipe Bodi -->
+        <div>
+          <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Tipe Bodi</label>
+          <select id="filter-body" class="w-full bg-[#18202c] border border-white/10 rounded-md px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs text-white focus:outline-none focus:border-dealer-red">
+            <option value="all">Semua Bodi</option>
+            <option value="mpv">MPV Keluarga</option>
+            <option value="niaga">Niaga & Pick-Up</option>
+            <option value="city">City Car</option>
+            <option value="suv">Minibus & Travel</option>
+          </select>
+        </div>
+
+        <!-- Field 3: Model -->
+        <div>
+          <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Model</label>
+          <select id="filter-model" class="w-full bg-[#18202c] border border-white/10 rounded-md px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs text-white focus:outline-none focus:border-dealer-red">
+            <option value="all">Semua Model</option>
+            <option value="Veloz">Toyota Veloz</option>
+            <option value="Innova">Innova Reborn</option>
+            <option value="L300">Colt L300</option>
+            <option value="Agya">Toyota Agya</option>
+            <option value="HiAce">HiAce Premio</option>
+          </select>
+        </div>
+
+        <!-- Field 4: Max Price -->
+        <div>
+          <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Maks. Harga</label>
+          <select id="filter-price" class="w-full bg-[#18202c] border border-white/10 rounded-md px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs text-white focus:outline-none focus:border-dealer-red">
+            <option value="all">Semua Harga</option>
+            <option value="150000000">&lt; Rp 150 Jt</option>
+            <option value="260000000">&lt; Rp 260 Jt</option>
+            <option value="400000000">&lt; Rp 400 Jt</option>
+            <option value="600000000">&lt; Rp 600 Jt</option>
+          </select>
+        </div>
+
+        <!-- Field 5: Search Button (Spans 2 columns on mobile, 1 on desktop) -->
+        <div class="col-span-2 lg:col-span-1 pt-1 lg:pt-0">
+          <button type="submit" 
+                  class="w-full bg-dealer-red hover:bg-dealer-redHover text-white font-bold text-xs tracking-wider uppercase py-2.5 px-4 rounded-md transition-colors flex items-center justify-center gap-2 shadow-md">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>CARI MOBIL</span>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 5. SHOP OUR INVENTORY / POPULAR PICKS                                     -->
+  <!-- ========================================================================= -->
+  <section id="inventory" class="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-dealer-red">SHOP OUR INVENTORY</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
+          PILIHAN MOBIL POPULER (POPULAR PICKS)
+        </h2>
+        <p class="text-slate-500 text-xs sm:text-sm mt-1.5 leading-relaxed">
+          Koleksi unit bergaransi mesin & transmisi, bebas banjir & tabrak, surat-surat aman terverifikasi.
+        </p>
+
+        <!-- Category Tabs: Smooth Horizontal Scroll on Mobile -->
+        <div class="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-5 sm:gap-8 mt-6 sm:mt-8 border-b border-slate-200 px-2 pb-1">
+          <button onclick="filterByTab('all')" class="category-tab active" data-tab="all">SEMUA MOBIL</button>
+          <button onclick="filterByTab('mpv')" class="category-tab" data-tab="mpv">MPV KELUARGA</button>
+          <button onclick="filterByTab('niaga')" class="category-tab" data-tab="niaga">NIAGA & PICK-UP</button>
+          <button onclick="filterByTab('city')" class="category-tab" data-tab="city">CITY CAR</button>
+          <button onclick="filterByTab('suv')" class="category-tab" data-tab="suv">MINIBUS & TRAVEL</button>
+        </div>
+      </div>
+
+      <!-- CARS GRID: Balanced, App-like proportions on mobile & desktop -->
+      <div id="cars-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- CARD 1: Toyota Veloz 2023 -->
+        <div class="car-card bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between"
+             data-make="Toyota" data-model="Veloz" data-body="mpv" data-price="255000000">
+          <div>
+            <!-- Image Stage with Year Badge -->
+            <div class="relative bg-slate-50 h-44 sm:h-48 p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <span class="absolute top-2.5 left-2.5 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-sm">
+                2023
+              </span>
+              <span class="absolute top-2.5 right-2.5 text-[9.5px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
+                Tangan Pertama
+              </span>
+              <img src="mobil1.jpeg" alt="Toyota Veloz 1.5 Q" class="w-full h-full object-contain drop-shadow transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <!-- Content -->
+            <div class="p-3.5 sm:p-4 space-y-2.5">
+              <h3 class="font-bold text-sm text-slate-900 leading-snug line-clamp-1">
+                2023 Toyota New Veloz 1.5 Q
+              </h3>
+              
+              <!-- Specs Pills -->
+              <div class="flex flex-wrap items-center gap-1.5 text-slate-600 text-[10.5px]">
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-gauge text-slate-400"></i> 18.250 km
+                </span>
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-sliders text-slate-400"></i> Matic CVT
+                </span>
+              </div>
+
+              <!-- Price -->
+              <div class="pt-2 border-t border-slate-100 flex items-baseline justify-between">
+                <div>
+                  <span class="text-[9.5px] text-slate-400 uppercase block font-medium">Harga Tunai</span>
+                  <div class="text-base sm:text-lg font-black text-slate-900">Rp 255.000.000</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9px] text-dealer-red uppercase font-semibold block">DP Promo</span>
+                  <span class="text-xs font-bold text-dealer-red">Mulai 25 Jt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Link -->
+          <div class="p-3.5 sm:p-4 pt-0">
+            <button onclick="openCarModal('Toyota New Veloz 1.5 Q', '2023', 'Rp 255.000.000', 'mobil1.jpeg', '18.250 km', 'Matic CVT', 'Bensin', 'Putih Mutiara', '255000000')"
+                    class="w-full py-2 px-3 bg-slate-50 hover:bg-dealer-red hover:text-white text-dealer-red rounded-md font-bold text-xs flex items-center justify-between group transition-colors border border-slate-200 hover:border-dealer-red">
+              <span>LIHAT DETAIL LENGKAP</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 2: Innova Reborn Diesel 2021 -->
+        <div class="car-card bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between"
+             data-make="Toyota" data-model="Innova" data-body="mpv" data-price="365000000">
+          <div>
+            <div class="relative bg-slate-50 h-44 sm:h-48 p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <span class="absolute top-2.5 left-2.5 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-sm">
+                2021
+              </span>
+              <span class="absolute top-2.5 right-2.5 text-[9.5px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
+                Diesel Turbo
+              </span>
+              <img src="mobil4.jpeg" alt="Toyota Innova Reborn Diesel" class="w-full h-full object-contain drop-shadow transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="p-3.5 sm:p-4 space-y-2.5">
+              <h3 class="font-bold text-sm text-slate-900 leading-snug line-clamp-1">
+                2021 Toyota Innova Reborn 2.4 V
+              </h3>
+              
+              <div class="flex flex-wrap items-center gap-1.5 text-slate-600 text-[10.5px]">
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-gauge text-slate-400"></i> 45.300 km
+                </span>
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-sliders text-slate-400"></i> Automatic
+                </span>
+              </div>
+
+              <div class="pt-2 border-t border-slate-100 flex items-baseline justify-between">
+                <div>
+                  <span class="text-[9.5px] text-slate-400 uppercase block font-medium">Harga Tunai</span>
+                  <div class="text-base sm:text-lg font-black text-slate-900">Rp 365.000.000</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9px] text-dealer-red uppercase font-semibold block">DP Promo</span>
+                  <span class="text-xs font-bold text-dealer-red">Mulai 35 Jt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 sm:p-4 pt-0">
+            <button onclick="openCarModal('Toyota Innova Reborn 2.4 V Diesel', '2021', 'Rp 365.000.000', 'mobil4.jpeg', '45.300 km', 'Automatic', 'Solar / Diesel', 'Abu-Abu Metalik', '365000000')"
+                    class="w-full py-2 px-3 bg-slate-50 hover:bg-dealer-red hover:text-white text-dealer-red rounded-md font-bold text-xs flex items-center justify-between group transition-colors border border-slate-200 hover:border-dealer-red">
+              <span>LIHAT DETAIL LENGKAP</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 3: Mitsubishi Colt L300 2024 -->
+        <div class="car-card bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between"
+             data-make="Mitsubishi" data-model="L300" data-body="niaga" data-price="185000000">
+          <div>
+            <div class="relative bg-slate-50 h-44 sm:h-48 p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <span class="absolute top-2.5 left-2.5 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-sm">
+                2024
+              </span>
+              <span class="absolute top-2.5 right-2.5 text-[9.5px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
+                Euro 4 New
+              </span>
+              <img src="mobil2.jpeg" alt="Mitsubishi Colt L300 Pick Up" class="w-full h-full object-contain drop-shadow transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="p-3.5 sm:p-4 space-y-2.5">
+              <h3 class="font-bold text-sm text-slate-900 leading-snug line-clamp-1">
+                2024 Mitsubishi Colt L300 Euro 4
+              </h3>
+              
+              <div class="flex flex-wrap items-center gap-1.5 text-slate-600 text-[10.5px]">
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-gauge text-slate-400"></i> 11.200 km
+                </span>
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-sliders text-slate-400"></i> Manual 5-Spd
+                </span>
+              </div>
+
+              <div class="pt-2 border-t border-slate-100 flex items-baseline justify-between">
+                <div>
+                  <span class="text-[9.5px] text-slate-400 uppercase block font-medium">Harga Tunai</span>
+                  <div class="text-base sm:text-lg font-black text-slate-900">Rp 185.000.000</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9px] text-dealer-red uppercase font-semibold block">DP Promo</span>
+                  <span class="text-xs font-bold text-dealer-red">Mulai 18 Jt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 sm:p-4 pt-0">
+            <button onclick="openCarModal('Mitsubishi Colt L300 Pick Up Euro 4', '2024', 'Rp 185.000.000', 'mobil2.jpeg', '11.200 km', 'Manual', 'Solar Euro 4', 'Hitam Solid', '185000000')"
+                    class="w-full py-2 px-3 bg-slate-50 hover:bg-dealer-red hover:text-white text-dealer-red rounded-md font-bold text-xs flex items-center justify-between group transition-colors border border-slate-200 hover:border-dealer-red">
+              <span>LIHAT DETAIL LENGKAP</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 4: Toyota Agya TRD Sportivo 2020 -->
+        <div class="car-card bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between"
+             data-make="Toyota" data-model="Agya" data-body="city" data-price="128000000">
+          <div>
+            <div class="relative bg-slate-50 h-44 sm:h-48 p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <span class="absolute top-2.5 left-2.5 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-sm">
+                2020
+              </span>
+              <span class="absolute top-2.5 right-2.5 text-[9.5px] font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded">
+                Super Irit
+              </span>
+              <img src="mobil5.jpeg" alt="Toyota Agya TRD" class="w-full h-full object-contain drop-shadow transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="p-3.5 sm:p-4 space-y-2.5">
+              <h3 class="font-bold text-sm text-slate-900 leading-snug line-clamp-1">
+                2020 Toyota New Agya 1.2 TRD S
+              </h3>
+              
+              <div class="flex flex-wrap items-center gap-1.5 text-slate-600 text-[10.5px]">
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-gauge text-slate-400"></i> 28.500 km
+                </span>
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-sliders text-slate-400"></i> Automatic
+                </span>
+              </div>
+
+              <div class="pt-2 border-t border-slate-100 flex items-baseline justify-between">
+                <div>
+                  <span class="text-[9.5px] text-slate-400 uppercase block font-medium">Harga Tunai</span>
+                  <div class="text-base sm:text-lg font-black text-slate-900">Rp 128.000.000</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9px] text-dealer-red uppercase font-semibold block">DP Promo</span>
+                  <span class="text-xs font-bold text-dealer-red">Mulai 15 Jt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 sm:p-4 pt-0">
+            <button onclick="openCarModal('Toyota New Agya 1.2 TRD Sportivo', '2020', 'Rp 128.000.000', 'mobil5.jpeg', '28.500 km', 'Automatic', 'Bensin', 'Kuning Sporty', '128000000')"
+                    class="w-full py-2 px-3 bg-slate-50 hover:bg-dealer-red hover:text-white text-dealer-red rounded-md font-bold text-xs flex items-center justify-between group transition-colors border border-slate-200 hover:border-dealer-red">
+              <span>LIHAT DETAIL LENGKAP</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 5: Toyota HiAce Premio 2022 -->
+        <div class="car-card bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between"
+             data-make="Toyota" data-model="HiAce" data-body="suv" data-price="580000000">
+          <div>
+            <div class="relative bg-slate-50 h-44 sm:h-48 p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+              <span class="absolute top-2.5 left-2.5 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-sm">
+                2022
+              </span>
+              <span class="absolute top-2.5 right-2.5 text-[9.5px] font-semibold text-purple-700 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded">
+                VIP Travel
+              </span>
+              <img src="mobil3.jpeg" alt="Toyota HiAce Premio" class="w-full h-full object-contain drop-shadow transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <div class="p-3.5 sm:p-4 space-y-2.5">
+              <h3 class="font-bold text-sm text-slate-900 leading-snug line-clamp-1">
+                2022 Toyota HiAce Premio 2.8 MT
+              </h3>
+              
+              <div class="flex flex-wrap items-center gap-1.5 text-slate-600 text-[10.5px]">
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-users text-slate-400"></i> 14 Seat VIP
+                </span>
+                <span class="bg-slate-100 px-2 py-0.5 rounded flex items-center gap-1">
+                  <i class="fa-solid fa-sliders text-slate-400"></i> Manual 6-Spd
+                </span>
+              </div>
+
+              <div class="pt-2 border-t border-slate-100 flex items-baseline justify-between">
+                <div>
+                  <span class="text-[9.5px] text-slate-400 uppercase block font-medium">Harga Tunai</span>
+                  <div class="text-base sm:text-lg font-black text-slate-900">Rp 580.000.000</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9px] text-dealer-red uppercase font-semibold block">DP Promo</span>
+                  <span class="text-xs font-bold text-dealer-red">Mulai 60 Jt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 sm:p-4 pt-0">
+            <button onclick="openCarModal('Toyota HiAce Premio 2.8 MT', '2022', 'Rp 580.000.000', 'mobil3.jpeg', '32.000 km', 'Manual 6-Speed', 'Solar Diesel', 'Silver Metalik', '580000000')"
+                    class="w-full py-2 px-3 bg-slate-50 hover:bg-dealer-red hover:text-white text-dealer-red rounded-md font-bold text-xs flex items-center justify-between group transition-colors border border-slate-200 hover:border-dealer-red">
+              <span>LIHAT DETAIL LENGKAP</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 6: REQUEST MOBIL IMPIAN -->
+        <div class="car-card bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl p-4 sm:p-5 flex flex-col justify-between text-center">
+          <div class="my-auto space-y-2.5 py-3">
+            <div class="w-11 h-11 mx-auto rounded-full bg-dealer-red/10 text-dealer-red flex items-center justify-center text-lg">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Cari Mobil Lainnya?</h3>
+            <p class="text-xs text-slate-500 leading-relaxed max-w-xs mx-auto">
+              Sampaikan tipe & budget Anda. Tim sales kami siap mencarikan unit terbaik dengan inspeksi ketat.
+            </p>
+          </div>
+          <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%2C%20saya%20sedang%20mencari%20mobil%20tipe%3A%20...%20dengan%20budget%3A%20..." target="_blank"
+             class="w-full py-2.5 bg-slate-900 hover:bg-dealer-red text-white text-xs font-bold tracking-wider rounded-md uppercase transition-colors flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>REQUEST VIA WA</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Center Bottom View All Button -->
+      <div class="text-center mt-8 sm:mt-12">
+        <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%2C%20saya%20ingin%20melihat%20katalog%20lengkap%20semua%20unit%20mobil%20yang%20tersedia." target="_blank"
+           class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-slate-900 hover:bg-slate-900 hover:text-white text-slate-900 text-xs font-bold tracking-widest uppercase rounded-md transition-all">
+          <span>VIEW ALL INVENTORY (SEMUA MOBIL)</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. 4-PILLAR VALUE PROPS: Compact 2x2 Grid on Mobile                      -->
+  <!-- ========================================================================= -->
+  <section id="keunggulan" class="bg-dealer-dark text-white py-12 sm:py-14 border-t border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        
+        <!-- Prop 1: Quality You Can Trust -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:p-4 space-y-2">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-dealer-red/15 border border-dealer-red/30 flex items-center justify-center text-dealer-red text-base sm:text-xl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h4 class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-white">QUALITY YOU CAN TRUST</h4>
+          <p class="text-[10px] sm:text-xs text-slate-400 leading-relaxed">
+            Inspeksi 160 titik, 100% bebas banjir & bukan bekas tabrakan fatal.
+          </p>
+        </div>
+
+        <!-- Prop 2: Best Price Guarantee -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:p-4 space-y-2">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-dealer-red/15 border border-dealer-red/30 flex items-center justify-center text-dealer-red text-base sm:text-xl">
+            <i class="fa-solid fa-tag"></i>
+          </div>
+          <h4 class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-white">BEST PRICE GUARANTEE</h4>
+          <p class="text-[10px] sm:text-xs text-slate-400 leading-relaxed">
+            Harga jujur tanpa biaya siluman, taksiran tukar tambah paling tinggi.
+          </p>
+        </div>
+
+        <!-- Prop 3: Flexible Financing -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:p-4 space-y-2">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-dealer-red/15 border border-dealer-red/30 flex items-center justify-center text-dealer-red text-base sm:text-xl">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h4 class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-white">FLEXIBLE FINANCING</h4>
+          <p class="text-[10px] sm:text-xs text-slate-400 leading-relaxed">
+            Mitra leasing terkemuka, DP ringan, bunga rendah, proses kilat.
+          </p>
+        </div>
+
+        <!-- Prop 4: Expert Support -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-3.5 sm:p-4 space-y-2">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-dealer-red/15 border border-dealer-red/30 flex items-center justify-center text-dealer-red text-base sm:text-xl">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h4 class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-white">EXPERT SUPPORT</h4>
+          <p class="text-[10px] sm:text-xs text-slate-400 leading-relaxed">
+            Dukungan test drive, cek fisik Samsat, & antar mobil se-Lampung.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. DUAL PROMO SPLIT BANNERS                                               -->
+  <!-- ========================================================================= -->
+  <section class="py-12 sm:py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+        
+        <!-- LEFT BANNER: EASY FINANCING -->
+        <div class="bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200 shadow-sm relative overflow-hidden group flex flex-col justify-between">
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+            
+            <div class="sm:col-span-7 space-y-2.5">
+              <span class="text-[10px] sm:text-xs font-bold text-dealer-red uppercase tracking-widest block">EASY FINANCING</span>
+              <h3 class="text-xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                DRIVE NOW,<br>PAY YOUR WAY
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Dapatkan persetujuan kredit kilat hanya dalam hitungan menit. Sesuaikan rencana pembayaran sesuai kenyamanan finansial Anda.
+              </p>
+              <div class="pt-2">
+                <a href="#kredit" 
+                   class="inline-block bg-dealer-red hover:bg-dealer-redHover text-white text-xs font-bold tracking-wider uppercase px-5 py-2.5 sm:px-6 sm:py-3 rounded-md transition-colors shadow-md">
+                  GET PRE-APPROVED
+                </a>
+              </div>
+            </div>
+
+            <div class="sm:col-span-5 flex items-center justify-center pt-2 sm:pt-0">
+              <div class="w-full max-w-[220px] bg-slate-50 rounded-xl p-2.5 border border-slate-100 flex items-center justify-center">
+                <img src="mobil1.jpeg" alt="Toyota Veloz" class="w-full max-h-36 sm:max-h-40 object-contain drop-shadow transition-transform duration-300 group-hover:scale-105">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT BANNER: VALUE YOUR TRADE -->
+        <div id="tukar-tambah" class="bg-dealer-dark text-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/10 shadow-sm relative overflow-hidden group flex flex-col justify-between">
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+            
+            <div class="sm:col-span-7 space-y-2.5">
+              <span class="text-[10px] sm:text-xs font-bold text-dealer-red uppercase tracking-widest block">VALUE YOUR TRADE</span>
+              <h3 class="text-xl sm:text-3xl font-extrabold text-white leading-tight">
+                BERAPA NILAI MOBIL<br>LAMA ANDA?
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Tukarkan mobil lama Anda dengan unit baru yang lebih prima. Dapatkan penaksiran harga pasar tertinggi dan transparan dalam beberapa menit.
+              </p>
+              <div class="pt-2">
+                <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%2C%20saya%20mau%20konsultasi%20tukar%20tambah%20mobil%20lama%20saya." target="_blank"
+                   class="inline-block bg-transparent hover:bg-white/10 text-white border-2 border-white text-xs font-bold tracking-wider uppercase px-5 py-2.5 sm:px-6 sm:py-3 rounded-md transition-colors">
+                  VALUE YOUR TRADE
+                </a>
+              </div>
+            </div>
+
+            <div class="sm:col-span-5 flex items-center justify-center pt-2 sm:pt-0">
+              <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-dealer-red/15 border-2 border-dealer-red/30 flex items-center justify-center text-dealer-red text-3xl sm:text-4xl shadow-inner group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-key"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. SIMULASI KREDIT INTERAKTIF                                             -->
+  <!-- ========================================================================= -->
+  <section id="kredit" class="py-14 sm:py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-slate-900 rounded-2xl p-5 sm:p-10 border border-slate-800 text-white shadow-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          
+          <!-- Text Info -->
+          <div class="lg:col-span-5 space-y-3 sm:space-y-4">
+            <span class="text-[10px] sm:text-xs font-bold text-dealer-red uppercase tracking-widest block">KALKULATOR PEMBIAYAAN</span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-white leading-tight">
+              HITUNG ESTIMASI ANGSURAN MOBIL IMPIAN ANDA
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Berkah Jaya bermitra dengan leasing resmi terkemuka (BCA Finance, Mandiri Tunas Finance, Adira) guna menghadirkan bunga kompetitif dan proses ACC kilat.
+            </p>
+
+            <div class="space-y-2 pt-1 text-xs text-slate-300">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>DP fleksibel mulai 10% - 30%</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Pilihan tenor panjang 1 hingga 4 tahun</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Dokumen dibantu sampai mobil tiba di garasi Anda</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Area -->
+          <div class="lg:col-span-7 bg-[#151c27] p-4 sm:p-7 rounded-xl border border-white/10 space-y-4 sm:space-y-5">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <!-- Select Unit -->
+              <div>
+                <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Pilih Unit Mobil</label>
+                <select id="calc-car" onchange="calcInstallment()" class="w-full bg-[#0e131b] border border-white/10 rounded-md px-3 py-2 sm:py-2.5 text-xs text-white focus:outline-none focus:border-dealer-red">
+                  <option value="255000000" selected>Toyota Veloz 1.5 Q - Rp 255 Jt</option>
+                  <option value="365000000">Toyota Innova Reborn - Rp 365 Jt</option>
+                  <option value="185000000">Mitsubishi Colt L300 - Rp 185 Jt</option>
+                  <option value="128000000">Toyota New Agya TRD - Rp 128 Jt</option>
+                  <option value="580000000">Toyota HiAce Premio - Rp 580 Jt</option>
+                </select>
+              </div>
+
+              <!-- DP Percentage -->
+              <div>
+                <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Uang Muka (DP %)</label>
+                <select id="calc-dp-percent" onchange="calcInstallment()" class="w-full bg-[#0e131b] border border-white/10 rounded-md px-3 py-2 sm:py-2.5 text-xs text-white focus:outline-none focus:border-dealer-red">
+                  <option value="0.10">DP 10% (Promo Spesial)</option>
+                  <option value="0.20" selected>DP 20% (Paling Populer)</option>
+                  <option value="0.30">DP 30% (Cicilan Lebih Ringan)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Tenor Selection -->
+            <div>
+              <label class="block text-[10px] sm:text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Jangka Waktu (Tenor)</label>
+              <div class="grid grid-cols-4 gap-1.5 sm:gap-2">
+                <button type="button" onclick="chooseTenor(1, this)" class="tenor-opt py-2 text-[11px] sm:text-xs font-bold rounded-md bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10">1 Thn</button>
+                <button type="button" onclick="chooseTenor(2, this)" class="tenor-opt py-2 text-[11px] sm:text-xs font-bold rounded-md bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10">2 Thn</button>
+                <button type="button" onclick="chooseTenor(3, this)" class="tenor-opt active py-2 text-[11px] sm:text-xs font-bold rounded-md bg-dealer-red border border-dealer-red text-white">3 Thn</button>
+                <button type="button" onclick="chooseTenor(4, this)" class="tenor-opt py-2 text-[11px] sm:text-xs font-bold rounded-md bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10">4 Thn</button>
+              </div>
+            </div>
+
+            <!-- Calculation Output -->
+            <div class="pt-3 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-3 items-center">
+              <div>
+                <span class="text-[9.5px] text-slate-400 uppercase tracking-wider block">Estimasi Cicilan Per Bulan</span>
+                <div id="res-installment" class="text-xl sm:text-2xl font-black text-dealer-red">Rp 6.800.000 / bln</div>
+                <div id="res-dp" class="text-[10.5px] text-slate-400 mt-0.5 truncate">DP: Rp 51.000.000 (20%) • Tenor 3 Thn</div>
+              </div>
+
+              <div>
+                <a id="res-wa-btn" href="https://wa.me/6283179992384" target="_blank"
+                   class="w-full py-2.5 sm:py-3 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs tracking-wider uppercase rounded-md transition-colors flex items-center justify-center gap-2 shadow-md">
+                  <i class="fa-brands fa-whatsapp text-sm"></i>
+                  <span>AJUKAN VIA WHATSAPP</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 9. GEDUNG SHOWROOM & FASILITAS                                            -->
+  <!-- ========================================================================= -->
+  <section id="showroom" class="py-14 sm:py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        
+        <!-- Left: Gedung Showroom Foto Asli (shorum.jpeg) -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white p-2 group">
+            <img src="shorum.jpeg" alt="Gedung Showroom Berkah Jaya Metro Lampung" class="w-full h-56 sm:h-72 lg:h-[400px] object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent rounded-xl flex items-end p-4 sm:p-6">
+              <div>
+                <span class="inline-block bg-dealer-red text-white text-[9.5px] sm:text-[10px] font-bold px-2.5 py-0.5 rounded tracking-wider uppercase mb-1">
+                  SHOWROOM RESMI KOTA METRO
+                </span>
+                <h3 class="text-white font-extrabold text-base sm:text-xl">BERKAH JAYA AUTO GROUP</h3>
+                <p class="text-xs text-slate-200 mt-0.5">
+                  Jl. Soekarno Hatta No.43 16b, Mulyojati, Kec. Metro Barat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Detail Fasilitas (2x2 Grid) -->
+        <div class="lg:col-span-6 space-y-4 sm:space-y-5">
+          <span class="text-xs font-bold text-dealer-red uppercase tracking-widest block">FASILITAS & PELAYANAN</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+            KENYAMANAN MAKSIMAL SAAT MEMILIH MOBIL
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Kunjungi showroom kami dan nikmati pengalaman transaksi yang ramah, transparan, dan tanpa tekanan. Konsultan kami siap mendampingi Anda.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2.5 sm:gap-4 pt-1">
+            
+            <div class="bg-white p-3 sm:p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-dealer-red/10 text-dealer-red flex items-center justify-center text-sm sm:text-lg flex-shrink-0">
+                <i class="fa-solid fa-car-on"></i>
+              </div>
+              <div>
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 uppercase">Test Drive Bebas</h4>
+                <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Uji performa mesin dan suspensi langsung.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-3 sm:p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-dealer-red/10 text-dealer-red flex items-center justify-center text-sm sm:text-lg flex-shrink-0">
+                <i class="fa-solid fa-couch"></i>
+              </div>
+              <div>
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 uppercase">Ruang Tunggu AC</h4>
+                <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Ruang AC sejuk, kopi gratis, & ramah keluarga.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-3 sm:p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-dealer-red/10 text-dealer-red flex items-center justify-center text-sm sm:text-lg flex-shrink-0">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <div>
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 uppercase">Kirim Se-Lampung</h4>
+                <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Layanan antar mobil sampai ke garasi rumah.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-3 sm:p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3">
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-dealer-red/10 text-dealer-red flex items-center justify-center text-sm sm:text-lg flex-shrink-0">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+              <div>
+                <h4 class="text-[11px] sm:text-xs font-bold text-slate-900 uppercase">Cek Legalitas</h4>
+                <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Bantuan cek fisik Samsat, 100% dokumen sah.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-1">
+            <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%2C%20saya%20ingin%20jadwalkan%20kunjungan%20ke%20showroom%20untuk%20test%20drive." target="_blank"
+               class="inline-flex items-center gap-2 text-xs font-bold text-dealer-red hover:underline tracking-wider uppercase">
+              <span>JADWALKAN KEDATANGAN ATAU TEST DRIVE</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 10. WE PROUDLY CARRY TOP BRANDS                                           -->
+  <!-- ========================================================================= -->
+  <section class="py-10 sm:py-14 bg-white border-b border-slate-200 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <p class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-6 sm:mb-8">
+        WE PROUDLY CARRY TOP BRANDS
+      </p>
+
+      <div class="grid grid-cols-4 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-10 text-slate-600 text-xs sm:text-base font-black tracking-wider">
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-red-600 transition-colors">
+          <i class="fa-solid fa-car text-base sm:text-xl text-red-600"></i>
+          <span>TOYOTA</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-slate-800 transition-colors">
+          <i class="fa-solid fa-car-rear text-base sm:text-xl text-slate-700"></i>
+          <span>HONDA</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-red-700 transition-colors">
+          <i class="fa-solid fa-truck-pickup text-base sm:text-xl text-red-700"></i>
+          <span>MITSUBISHI</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-blue-600 transition-colors">
+          <i class="fa-solid fa-car-side text-base sm:text-xl text-blue-600"></i>
+          <span>DAIHATSU</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-blue-800 transition-colors">
+          <i class="fa-solid fa-car text-base sm:text-xl text-blue-800"></i>
+          <span>SUZUKI</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-slate-900 transition-colors">
+          <i class="fa-solid fa-truck-ramp-box text-base sm:text-xl text-slate-900"></i>
+          <span>ISUZU</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-indigo-600 transition-colors">
+          <i class="fa-solid fa-shield-halved text-base sm:text-xl text-indigo-600"></i>
+          <span>HYUNDAI</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 hover:text-amber-600 transition-colors">
+          <i class="fa-solid fa-award text-base sm:text-xl text-amber-600"></i>
+          <span>NISSAN</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 11. LOKASI SHOWROOM & MAPS                                                -->
+  <!-- ========================================================================= -->
+  <section id="lokasi" class="py-14 sm:py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        
+        <!-- Left: Address Information -->
+        <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-5">
+          <div class="space-y-3.5">
+            <span class="text-xs font-bold text-dealer-red uppercase tracking-widest block">LOKASI RESMI SHOWROOM</span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+              KUNJUNGI SHOWROOM KAMI DI KOTA METRO
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Lokasi strategis di tepi jalan protokol Kota Metro, mudah dijangkau dari Bandar Lampung, Lampung Tengah, maupun Lampung Timur.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-md bg-dealer-red/10 text-dealer-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900 uppercase">Alamat Lengkap</h4>
+                  <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
+                    Jl. Soekarno Hatta No.43 16b, Mulyojati, Kec. Metro Barat, Kota Metro, Lampung 34121
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 pt-2 border-t border-slate-100">
+                <div class="w-8 h-8 rounded-md bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900 uppercase">Jam Operasional</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">
+                    Senin - Minggu: 08.00 - 18.00 WIB (Buka Setiap Hari)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+            <a href="https://maps.google.com/?q=Jl.+Soekarno+Hatta+No.43+16b,+Mulyojati,+Kec.+Metro+Bar.,+Kota+Metro,+Lampung+34121" target="_blank"
+               class="flex-1 py-2.5 px-4 bg-dealer-red hover:bg-dealer-redHover text-white text-xs font-bold tracking-wider rounded-md uppercase text-center transition-colors flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>PETUNJUK ARAH (MAPS)</span>
+            </a>
+            
+            <a href="https://wa.me/6283179992384" target="_blank"
+               class="flex-1 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold tracking-wider rounded-md uppercase text-center transition-colors flex items-center justify-center gap-2 shadow-md">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>CHAT SALES WA</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Location Graphic Frame -->
+        <div class="lg:col-span-7 bg-white p-2.5 sm:p-3 rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
+          <div class="relative w-full h-[280px] sm:h-[360px] rounded-xl overflow-hidden bg-slate-900 flex items-center justify-center text-center p-4 sm:p-6 text-white">
+            <img src="shorum.jpeg" alt="Peta Showroom Berkah Jaya" class="absolute inset-0 w-full h-full object-cover opacity-25 filter blur-xs">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-slate-950/90"></div>
+            
+            <div class="relative z-10 max-w-md space-y-2.5">
+              <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full bg-dealer-red/20 border-2 border-dealer-red flex items-center justify-center text-dealer-red text-xl sm:text-2xl shadow-xl">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3 class="text-base sm:text-xl font-bold text-white">SHOWROOM MOBIL BERKAH JAYA METRO</h3>
+              <p class="text-xs text-slate-300">
+                Jl. Soekarno Hatta No.43 16b, Mulyojati, Kec. Metro Barat, Kota Metro, Lampung
+              </p>
+              <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-[10px] sm:text-[11px] text-emerald-400 font-medium">
+                <i class="fa-solid fa-square-parking"></i>
+                <span>Area Parkir Luas • Akses Jalan Protokol</span>
+              </div>
+              <div class="pt-2">
+                <a href="https://maps.google.com/?q=Jl.+Soekarno+Hatta+No.43+16b,+Mulyojati,+Kec.+Metro+Bar.,+Kota+Metro,+Lampung+34121" target="_blank"
+                   class="inline-block py-2 px-5 bg-dealer-red hover:bg-dealer-redHover text-white text-xs font-bold rounded-md uppercase tracking-wider transition-colors">
+                  BUKA DI GOOGLE MAPS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 12. FOOTER                                                                -->
+  <!-- ========================================================================= -->
+  <footer class="bg-dealer-darker text-slate-400 pt-12 sm:pt-16 pb-24 sm:pb-12 text-xs border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 border-b border-white/10">
+        
+        <!-- Column 1: Brand & Bio -->
+        <div class="lg:col-span-4 space-y-3.5">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-slate-900 p-1 flex items-center justify-center border border-white/10">
+              <img src="logo.jpeg" alt="Logo Berkah Jaya" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="text-white font-extrabold text-base sm:text-lg tracking-tight">BERKAH JAYA</div>
+              <div class="text-[9px] text-dealer-red font-bold tracking-widest uppercase">AUTO GROUP METRO</div>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            We're more than a dealership. We're your automotive partner for life. Dealer dan showroom mobil terpercaya di Kota Metro & Provinsi Lampung dengan garansi mesin dan kepastian legalitas surat.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-3 pt-1 text-slate-300">
+            <a href="https://wa.me/6283179992384" target="_blank" class="w-8 h-8 rounded bg-white/5 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="https://instagram.com/yukocalatrava" target="_blank" class="w-8 h-8 rounded bg-white/5 hover:bg-pink-600 hover:text-white flex items-center justify-center transition-colors" title="Instagram">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Jl.+Soekarno+Hatta+No.43+16b,+Mulyojati,+Kec.+Metro+Bar.,+Kota+Metro,+Lampung+34121" target="_blank" class="w-8 h-8 rounded bg-white/5 hover:bg-dealer-red hover:text-white flex items-center justify-center transition-colors" title="Google Maps">
+              <i class="fa-solid fa-map-location-dot text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="lg:col-span-2 space-y-2.5">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">QUICK LINKS</h4>
+          <ul class="space-y-1.5 text-slate-400">
+            <li><a href="#beranda" class="hover:text-dealer-red transition-colors">Beranda</a></li>
+            <li><a href="#inventory" class="hover:text-dealer-red transition-colors">Daftar Mobil</a></li>
+            <li><a href="#kredit" class="hover:text-dealer-red transition-colors">Simulasi Kredit</a></li>
+            <li><a href="#tukar-tambah" class="hover:text-dealer-red transition-colors">Tukar Tambah</a></li>
+            <li><a href="#keunggulan" class="hover:text-dealer-red transition-colors">Keunggulan</a></li>
+            <li><a href="#lokasi" class="hover:text-dealer-red transition-colors">Lokasi & Rute</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Care -->
+        <div class="lg:col-span-3 space-y-2.5">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">CUSTOMER CARE</h4>
+          <div class="space-y-2 text-slate-400">
+            <div class="flex items-start gap-2">
+              <i class="fa-solid fa-phone text-dealer-red text-xs mt-0.5"></i>
+              <div>
+                <span class="block text-white font-medium">(0831) 7999-2384</span>
+                <span class="text-[10px] text-slate-500">Fast Response WhatsApp</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2">
+              <i class="fa-brands fa-instagram text-dealer-red text-xs mt-0.5"></i>
+              <div>
+                <a href="https://instagram.com/yukocalatrava" target="_blank" class="text-white hover:text-pink-400 font-medium">@yukocalatrava</a>
+                <span class="text-[10px] text-slate-500 block">Instagram Resmi</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-dealer-red text-xs mt-0.5"></i>
+              <div class="text-[11px] leading-relaxed">
+                Jl. Soekarno Hatta No.43 16b, Mulyojati, Kec. Metro Barat, Kota Metro
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Hours -->
+        <div class="lg:col-span-3 space-y-2.5">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">HOURS (JAM BUKA)</h4>
+          <div class="space-y-1.5 text-slate-400 text-xs">
+            <div>
+              <div class="text-white font-semibold">Sales Department</div>
+              <div class="flex justify-between text-[11px] mt-0.5">
+                <span>Senin - Sabtu</span>
+                <span class="text-slate-300">08.00 - 18.00</span>
+              </div>
+              <div class="flex justify-between text-[11px] mt-0.5">
+                <span>Minggu</span>
+                <span class="text-slate-300">08.00 - 17.00</span>
+              </div>
+            </div>
+
+            <div class="pt-1.5 border-t border-white/10">
+              <div class="text-white font-semibold">Test Drive & Inspeksi</div>
+              <div class="flex justify-between text-[11px] mt-0.5">
+                <span>Setiap Hari</span>
+                <span class="text-emerald-400 font-medium">Buka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Legal Links -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 text-center sm:text-left">
+        <div>
+          © 2026 BERKAH JAYA AUTO GROUP. All rights reserved. Kota Metro, Lampung.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-300 transition-colors">Terms of Use</a>
+          <a href="#lokasi" class="hover:text-slate-300 transition-colors">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 13. MODAL DETAIL MOBIL                                                    -->
+  <!-- ========================================================================= -->
+  <div id="car-modal" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 transform transition-all animate-in fade-in zoom-in duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-3.5 sm:p-4 bg-slate-900 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span id="modal-badge-year" class="bg-dealer-red text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">2023</span>
+          <h3 id="modal-title" class="font-bold text-xs sm:text-sm text-white line-clamp-1">Toyota New Veloz 1.5 Q</h3>
+        </div>
+        <button onclick="closeCarModal()" class="text-slate-400 hover:text-white text-lg p-1 focus:outline-none" aria-label="Tutup Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Image Stage -->
+      <div class="bg-slate-50 p-4 sm:p-6 flex items-center justify-center h-44 sm:h-52 border-b border-slate-100">
+        <img id="modal-img" src="mobil1.jpeg" alt="Mobil" class="max-h-36 sm:max-h-44 w-auto object-contain drop-shadow-md">
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-4 sm:p-6 space-y-3.5">
+        <div class="flex items-baseline justify-between">
+          <div>
+            <span class="text-[9.5px] text-slate-400 uppercase font-semibold block">Harga Tunai Khusus</span>
+            <span id="modal-price" class="text-xl sm:text-2xl font-black text-dealer-red">Rp 255.000.000</span>
+          </div>
+          <span class="text-[10px] sm:text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full font-semibold">
+            Garansi Resmi
+          </span>
+        </div>
+
+        <!-- Specs Grid -->
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100 flex items-center gap-2">
+            <i class="fa-solid fa-gauge text-slate-400 text-sm"></i>
+            <div>
+              <span class="text-[9px] text-slate-400 block">Jarak Tempuh</span>
+              <strong id="modal-km" class="text-slate-800 text-[11px] sm:text-xs">18.250 km</strong>
+            </div>
+          </div>
+          <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100 flex items-center gap-2">
+            <i class="fa-solid fa-sliders text-slate-400 text-sm"></i>
+            <div>
+              <span class="text-[9px] text-slate-400 block">Transmisi</span>
+              <strong id="modal-trans" class="text-slate-800 text-[11px] sm:text-xs">Matic CVT</strong>
+            </div>
+          </div>
+          <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100 flex items-center gap-2">
+            <i class="fa-solid fa-gas-pump text-slate-400 text-sm"></i>
+            <div>
+              <span class="text-[9px] text-slate-400 block">Bahan Bakar</span>
+              <strong id="modal-fuel" class="text-slate-800 text-[11px] sm:text-xs">Bensin</strong>
+            </div>
+          </div>
+          <div class="bg-slate-50 p-2 sm:p-2.5 rounded-lg border border-slate-100 flex items-center gap-2">
+            <i class="fa-solid fa-palette text-slate-400 text-sm"></i>
+            <div>
+              <span class="text-[9px] text-slate-400 block">Warna Eksterior</span>
+              <strong id="modal-color" class="text-slate-800 text-[11px] sm:text-xs">Putih Mutiara</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="pt-1 flex flex-col sm:flex-row gap-2">
+          <a id="modal-wa-btn" href="https://wa.me/6283179992384" target="_blank"
+             class="flex-1 py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs tracking-wider uppercase rounded-md flex items-center justify-center gap-2 shadow-md transition-colors">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>TANYA UNIT VIA WA</span>
+          </a>
+          <button onclick="useCarInCalc(); closeCarModal();"
+                  class="flex-1 py-2.5 px-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs tracking-wider uppercase rounded-md flex items-center justify-center gap-2 transition-colors">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            <span>SIMULASI KREDIT</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 14. FLOATING CONTACT ACTIONS (Instagram & WhatsApp Seimbang & Harmonis)   -->
+  <!-- ========================================================================= -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2 bg-slate-950/85 backdrop-blur-md p-1.5 rounded-full shadow-2xl border border-white/15">
+    
+    <!-- Instagram Button -->
+    <a href="https://instagram.com/yukocalatrava" target="_blank"
+       class="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-rose-500 hover:opacity-90 text-white font-bold text-xs tracking-wide shadow-md transition-all hover:scale-105 active:scale-95"
+       title="Instagram @yukocalatrava">
+      <i class="fa-brands fa-instagram text-sm sm:text-base"></i>
+      <span class="hidden sm:inline font-semibold">@yukocalatrava</span>
+      <span class="sm:hidden text-[10.5px] font-semibold">Instagram</span>
+    </a>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6283179992384?text=Halo%20Berkah%20Jaya%20Auto%20Group%2C%20saya%20ingin%20tanya%20unit%20mobil%20yang%20tersedia." target="_blank"
+       class="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs tracking-wide shadow-md transition-all hover:scale-105 active:scale-95"
+       title="WhatsApp 0831-7999-2384">
+      <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
+      <span class="hidden sm:inline font-semibold">0831-7999-2384</span>
+      <span class="sm:hidden text-[10.5px] font-semibold">WhatsApp</span>
+    </a>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 15. JAVASCRIPT LOGIC                                                      -->
+  <!-- ========================================================================= -->
+  <script>
+    // 1. Mobile Drawer Navigation Toggle
+    const mobileBtn = document.getElementById('mobile-toggle');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileItems = document.querySelectorAll('.mobile-item');
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+      mobileItems.forEach(item => {
+        item.addEventListener('click', () => {
+          mobileDrawer.classList.add('hidden');
+        });
+      });
+    }
+
+    // 2. Category Tab Filtering
+    let currentCategory = 'all';
+
+    function filterByTab(category) {
+      currentCategory = category;
+      
+      const tabs = document.querySelectorAll('.category-tab');
+      tabs.forEach(tab => {
+        if (tab.getAttribute('data-tab') === category) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+
+      const cards = document.querySelectorAll('.car-card');
+      cards.forEach(card => {
+        const bodyType = card.getAttribute('data-body');
+        if (category === 'all' || bodyType === category || !bodyType) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Search Inventory Form Filter
+    function applyFilter() {
+      const make = document.getElementById('filter-make').value;
+      const model = document.getElementById('filter-model').value;
+      const body = document.getElementById('filter-body').value;
+      const maxPrice = document.getElementById('filter-price').value;
+
+      const cards = document.querySelectorAll('.car-card');
+
+      cards.forEach(card => {
+        const cardMake = card.getAttribute('data-make');
+        const cardModel = card.getAttribute('data-model');
+        const cardBody = card.getAttribute('data-body');
+        const cardPrice = parseFloat(card.getAttribute('data-price') || '0');
+
+        const matchMake = (make === 'all' || cardMake === make);
+        const matchModel = (model === 'all' || cardModel === model);
+        const matchBody = (body === 'all' || cardBody === body);
+        const matchPrice = (maxPrice === 'all' || cardPrice <= parseFloat(maxPrice));
+
+        if (!cardMake) {
+          card.style.display = 'flex';
+          return;
+        }
+
+        if (matchMake && matchModel && matchBody && matchPrice) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const inventorySec = document.getElementById('inventory');
+      if (inventorySec) {
+        inventorySec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function resetFilters() {
+      document.getElementById('filter-make').value = 'all';
+      document.getElementById('filter-model').value = 'all';
+      document.getElementById('filter-body').value = 'all';
+      document.getElementById('filter-price').value = 'all';
+      filterByTab('all');
+    }
+
+    // 4. Interactive Financing Calculator
+    let selectedTenorYears = 3;
+
+    function chooseTenor(years, btn) {
+      selectedTenorYears = years;
+      document.querySelectorAll('.tenor-opt').forEach(b => {
+        b.classList.remove('active', 'bg-dealer-red', 'border-dealer-red', 'text-white');
+        b.classList.add('bg-white/5', 'border-white/10', 'text-slate-300');
+      });
+      btn.classList.add('active', 'bg-dealer-red', 'border-dealer-red', 'text-white');
+      btn.classList.remove('bg-white/5', 'border-white/10', 'text-slate-300');
+      calcInstallment();
+    }
+
+    function calcInstallment() {
+      const carPrice = parseFloat(document.getElementById('calc-car').value);
+      const dpPercent = parseFloat(document.getElementById('calc-dp-percent').value);
+      const dpAmount = carPrice * dpPercent;
+      const loanAmount = carPrice - dpAmount;
+
+      const annualRate = 0.08;
+      const totalInterest = loanAmount * annualRate * selectedTenorYears;
+      const totalDebt = loanAmount + totalInterest;
+      const totalMonths = selectedTenorYears * 12;
+      const monthly = Math.round(totalDebt / totalMonths);
+
+      const formatIDR = (num) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(num);
+
+      document.getElementById('res-installment').textContent = `${formatIDR(monthly)} / bln`;
+      document.getElementById('res-dp').textContent = `DP: ${formatIDR(dpAmount)} (${Math.round(dpPercent * 100)}%) • Tenor ${selectedTenorYears} Thn (${totalMonths}x)`;
+
+      const carSelect = document.getElementById('calc-car');
+      const selectedName = carSelect.options[carSelect.selectedIndex].text;
+      const msg = encodeURIComponent(`Halo Berkah Jaya Auto Group, saya tertarik simulasi kredit unit ${selectedName} dengan DP ${formatIDR(dpAmount)} dan estimasi angsuran ${formatIDR(monthly)}/bulan selama ${selectedTenorYears} Tahun. Mohon info persyaratannya.`);
+      document.getElementById('res-wa-btn').href = `https://wa.me/6283179992384?text=${msg}`;
+    }
+
+    calcInstallment();
+
+    // 5. Car Detail Modal Logic
+    let currentModalPriceRaw = '255000000';
+
+    function openCarModal(title, year, price, img, km, trans, fuel, color, rawPrice) {
+      document.getElementById('modal-title').textContent = `${year} ${title}`;
+      document.getElementById('modal-badge-year').textContent = year;
+      document.getElementById('modal-price').textContent = price;
+      document.getElementById('modal-img').src = img;
+      document.getElementById('modal-km').textContent = km;
+      document.getElementById('modal-trans').textContent = trans;
+      document.getElementById('modal-fuel').textContent = fuel;
+      document.getElementById('modal-color').textContent = color;
+      currentModalPriceRaw = rawPrice;
+
+      const waMsg = encodeURIComponent(`Halo Berkah Jaya, saya ingin menanyakan ketersediaan dan detail kondisi unit ${year} ${title} (${price}). Bisakah dijadwalkan test drive?`);
+      document.getElementById('modal-wa-btn').href = `https://wa.me/6283179992384?text=${waMsg}`;
+
+      document.getElementById('car-modal').classList.remove('hidden');
+    }
+
+    function closeCarModal() {
+      document.getElementById('car-modal').classList.add('hidden');
+    }
+
+    function useCarInCalc() {
+      const calcSelect = document.getElementById('calc-car');
+      if (calcSelect) {
+        calcSelect.value = currentModalPriceRaw;
+        calcInstallment();
+        const kreditSec = document.getElementById('kredit');
+        if (kreditSec) {
+          kreditSec.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('car-modal');
+      if (e.target === modal) {
+        closeCarModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
